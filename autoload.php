@@ -1,9 +1,10 @@
 <?php
-spl_autoload_register(function ($class_name) {
+/*spl_autoload_register(function ($class_name) {
     $folders = [
         'Model/Class/',
-        'Model/Manager/',
         'Controller/',
+        'Model/Manager/',
+
     ];
     foreach ($folders as $folder) {
         if (file_exists($folder . $class_name . 'php')) {
@@ -11,4 +12,10 @@ spl_autoload_register(function ($class_name) {
             return;
         }
     }
-});
+});*/
+
+require 'Model/Manager/dbConnect.php';
+require 'Model/Manager/AdminManager.php';
+require 'Model/Manager/MotoManager.php';
+require 'Controller/MotoController.php';
+require 'Controller/AdminController.php';
