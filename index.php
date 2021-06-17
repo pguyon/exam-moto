@@ -10,11 +10,21 @@ if (!isset($_GET['controller']) || !isset($_GET['action'])) {
 
 
 if ($_GET['controller'] == 'moto') {
+    if (empty($_SESSION) || !$_SESSION['user']) {
+        header('Location: index.php?controller=moto&action=list');
+    }
     $controller = new MotoController();
     if ($_GET['action'] == 'list') {
         $controller->listMoto();
     }
+    if ($_GET['action'] == 'add') {
+        $controller->addMoto();
+    }
 }
+
+
+
+
 
 
 if ($_GET['controller'] == 'admin') {
@@ -30,8 +40,3 @@ if ($_GET['controller'] == 'admin') {
         require 'Vue/admin/administration.php';
     }
 }
-
-
-/* if (empty($_SESSION) || !$_SESSION['user']) {
-        header('Location: index.php?controller=moto&action=list');
-    }*/
