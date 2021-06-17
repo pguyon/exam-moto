@@ -45,4 +45,13 @@ class AdminController
         $motos = $this->adminManager->getAllMoto();
         require 'Vue/admin/administration.php';
     }
+
+
+    public function motoDetail($id)
+    {
+        $moto = $this->adminManager->getOneMoto($id);
+        if ($moto != null) {
+            require 'Vue/moto/detail.php';
+        }
+    }
 }

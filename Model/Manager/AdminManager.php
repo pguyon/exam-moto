@@ -69,7 +69,7 @@ class AdminManager extends dbConnect
         $res = $query->fetch();
 
         if ($res) {
-            $moto = new Moto($res['marque'], $res['modele'], $res['type'], $res['image'], $res['id']);
+            $moto = new Moto($res['marque'], $res['model'], $res['type'], $res['image'], $res['id']);
         }
 
         return $moto;

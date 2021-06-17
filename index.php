@@ -45,4 +45,11 @@ if ($_GET['controller'] == 'admin') {
             $controller->listMoto();
         }
     }
+    if ($_GET['action'] == 'motodetail' && isset($_GET['id'])) {
+        if (empty($_SESSION) || !$_SESSION['user']) {
+            header('Location: index.php?controller=admin&action=login');
+        } else {
+            $controller->motoDetail($_GET['id']);
+        }
+    }
 }

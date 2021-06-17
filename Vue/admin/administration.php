@@ -10,7 +10,7 @@
     <?php
     require 'Vue/admin/menuadmin.php';
     ?>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row col12">
             <?php
 
@@ -23,7 +23,7 @@
         <h5 class="card-title">' . $moto->getMarque() . '</h5>
         <p class="card-text">' . $moto->getModel() . '</p>
         <p class="card-text">' . $moto->getType() . '</p>
-        <a href="#" class="btn btn-secondary">Détail</a>
+        <a href="index.php?controller=admin&action=motodetail&id=' . $moto->getId() . '" class="btn btn-secondary">Détail</a>
     </div>
 </div>
     ')
