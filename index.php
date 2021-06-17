@@ -9,7 +9,7 @@ if (!isset($_GET['controller']) || !isset($_GET['action'])) {
 
 
 
-if ($_GET['controller'] = 'moto') {
+if ($_GET['controller'] == 'moto') {
     $controller = new MotoController();
     if ($_GET['action'] == 'list') {
         $controller->listMoto();
