@@ -57,9 +57,9 @@ class AdminController
 
     public function motoDelete($id)
     {
-        $moto = $this->adminManager->getOneMoto($id);
-        if ($moto != null) {
-            $this->adminManager->deleteMoto($moto);
+        $motos = $this->adminManager->getOneMoto($id);
+        if ($motos != null) {
+            $this->adminManager->deleteMoto($motos);
             require 'Vue/admin/administration.php';
         }
     }
