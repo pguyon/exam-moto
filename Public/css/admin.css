@@ -1,0 +1,11 @@
+body {
+    background-image: url(https://georide.fr/wp-content/uploads/2020/01/Circuit-Carole-circuit-carole.com_.jpg);
+}
+
+.btn-success:hover {
+    cursor: zoom-in;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}

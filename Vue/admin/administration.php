@@ -4,6 +4,8 @@
     <?php
     require 'Vue/Parts/global-stylesheet.php';
     ?>
+
+    <link href="Public/css/admin.css" rel="stylesheet">
 </head>
 
 <body>
@@ -11,7 +13,7 @@
     require 'Vue/admin/menuadmin.php';
     ?>
     <div class="container mt-5">
-        <div class="row col12">
+        <div class="row col-12">
             <?php
             if (is_array($motos) || is_object($motos)) {
 
@@ -24,7 +26,7 @@
                         <h5 class="card-title">' . $moto->getMarque() . '</h5>
                         <p class="card-text">' . $moto->getModel() . '</p>
                         <p class="card-text">' . $moto->getType() . '</p>
-                        <a href="index.php?controller=admin&action=motodetail&id=' . $moto->getId() . '" class="btn btn-secondary">Détail</a>
+                        <a href="index.php?controller=admin&action=motodetail&id=' . $moto->getId() . '" class="btn btn-success">Détail</a>
                         <a href="index.php?controller=admin&action=motodelete&id=' . $moto->getId() . '" class="btn btn-secondary">Supprimer</a>
                     </div>
                 </div>
