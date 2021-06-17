@@ -3,9 +3,9 @@ session_start();
 require 'autoload.php';
 
 
-/*if (!isset($_GET['controller']) || !isset($_GET['action'])) {
-    header('Location: index.php?controller=moto&action=list');
-}*/
+if (!isset($_GET['controller']) || !isset($_GET['action'])) {
+    header('Location: index.php?controller=admin&action=login');
+}
 
 
 
@@ -19,7 +19,6 @@ if ($_GET['controller'] = 'moto') {
 
 if ($_GET['controller'] == 'admin') {
     $controller = new AdminController();
-
     if ($_GET['action'] == 'login') {
         $controller->login();
     }

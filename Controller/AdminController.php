@@ -12,16 +12,13 @@ class AdminController
     public function login()
     {
         $errors = [];
-
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (empty($_POST['username'])) {
                 $errors[] = 'Veuillez saisir un username';
             }
-
             if (empty($_POST['password'])) {
                 $errors[] = 'Veuillez saisir un password';
             }
-
             if (count($errors) == 0) {
                 $admin = $this->adminManager->userLogin($_POST['username'], $_POST['password']);
                 if ($admin) {
