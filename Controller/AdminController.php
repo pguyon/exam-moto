@@ -11,7 +11,6 @@ class AdminController
 
     public function login()
     {
-
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -33,7 +32,6 @@ class AdminController
                 }
             }
         }
-
         require 'Vue/admin/login.php';
     }
 }

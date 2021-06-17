@@ -33,7 +33,7 @@ class Admin
         $this->username = $username;
     }
 
-    public function getPaswword()
+    public function getPassword()
     {
         return $this->password;
     }

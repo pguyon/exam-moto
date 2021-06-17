@@ -9,8 +9,17 @@ class AdminManager extends dbConnect
     }
 
 
-    public function userLogin()
+    public function userLogin($username, $password)
     {
+        $admin = null;
+        $user = $this->checkAdmin($username);
+
+        if ($user) {
+            if (password_verify($password,  $user->getPassword())) {
+                $admin = $user;
+            }
+        }
+        return $admin;
     }
 
 
