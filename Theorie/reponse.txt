@@ -2,7 +2,7 @@ Liste des 5 méthodes magiques:
     *  __construct
     *  __destruct
     *  __set
-    *  __isset
+    *  __get
     *  __unset
 
 : Eléments déclencheurs:
@@ -16,5 +16,37 @@ Liste des 5 méthodes magiques:
         }
 
     * __destruct : Il est appellé automatiquement à la fin d'un script.
+        exemple:
 
-    
+        public function __destruct(){
+            echo 'Autodestruction';
+        }
+
+    * __set : On l'appel pour pouvoir accèder à des propriété private ou protected; elle prend 2 paramètres $key et $value.
+        exemple:
+
+        public function __set($key, $value){
+            $this->moto[$key] = $value;
+        }
+
+    * __get : Elle est utilisé pour lire des données private, protected ou qui n'existe pas. Elle prend un seul paramatre $key et retourne la $key de l'objet.
+        exemple:
+
+        public function __get($key){
+            return $this->moto[$key];
+        }
+
+    * __unset : Elle est appelé lorsque qu'on a utilisé la méthode unsset sur des propriétés private, protected ou qui n'existe pas. Elle prend un seul paramatre $key et retourne la 
+                méthode unsset.
+        exemple:
+
+        public function __unset($key){
+            return unset($this->moto[$key]);
+        }
+
+        <?php
+            unset($newMoto->kms);
+        ?>
+
+
+
