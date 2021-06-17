@@ -20,7 +20,7 @@
                         <a class="nav-link" href="index.php?controller=admin&action=add">Ajouter une moto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php?controller=admin&action=logout">Me déconnecter</a>
+                        <a class="nav-link" href="index.php?controller=admin&action=disconnect">Me déconnecter</a>
                     </li>
 
                 </ul>

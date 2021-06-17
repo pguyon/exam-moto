@@ -22,4 +22,16 @@ if ($_GET['controller'] == 'admin') {
     if ($_GET['action'] == 'login') {
         $controller->login();
     }
+    if ($_GET['action'] == 'disconnect') {
+        $controller->disconnect();
+    }
+
+    if ($_GET['action'] == 'administration') {
+        require 'Vue/admin/administration.php';
+    }
 }
+
+
+/* if (empty($_SESSION) || !$_SESSION['user']) {
+        header('Location: index.php?controller=moto&action=list');
+    }*/

@@ -31,4 +31,11 @@ class AdminController
         }
         require 'Vue/admin/login.php';
     }
+
+
+    public function disconnect()
+    {
+        session_destroy();
+        header('location: index.php?controller=moto&action=list');
+    }
 }
