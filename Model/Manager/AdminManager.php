@@ -46,7 +46,7 @@ class AdminManager extends dbConnect
 
         $tableauMoto = [];
 
-        $query = $this->bdd->prepare("SELECT * FROM moto;");
+        $query = $this->bdd->prepare("SELECT * FROM moto ORDER BY type;");
         $query->execute();
 
         $resultats = $query->fetchAll();

@@ -17,7 +17,7 @@
                 <input type="text" id="model" class="fadeIn third" name="model" placeholder="Entrez le model de la moto">
                 <select class="form-select" aria-label="Default select example" name="type">
                     <option selected>Enduro</option>
-                    <option value="cutom">Custom</option>
+                    <option value="custom">Custom</option>
                     <option value="sportive">Sportive</option>
                     <option value="roadster">Roadster</option>
                 </select>
