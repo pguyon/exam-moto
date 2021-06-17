@@ -21,7 +21,7 @@ class MotoManager extends dbConnect
 
         foreach ($resultats as $resultat) {
 
-            $tableauMoto[] = new Moto($resultat['marque'], $resultat['modele'], $resultat['image'], $resultat['id']);
+            $tableauMoto[] = new Moto($resultat['marque'], $resultat['model'], $resultat['image'], $resultat['id']);
         }
 
         return $tableauMoto;

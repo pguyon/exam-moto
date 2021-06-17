@@ -4,21 +4,24 @@ require 'autoload.php';
 
 
 if (!isset($_GET['controller']) || !isset($_GET['action'])) {
-    header('Location: index.php?controller=admin&action=login');
+    header('Location: index.php?controller=moto&action=list');
 }
 
 
 
 if ($_GET['controller'] == 'moto') {
-    if (empty($_SESSION) || !$_SESSION['user']) {
-        header('Location: index.php?controller=moto&action=list');
-    }
+
     $controller = new MotoController();
     if ($_GET['action'] == 'list') {
         $controller->listMoto();
     }
+
     if ($_GET['action'] == 'add') {
-        $controller->addMoto();
+        if (empty($_SESSION) || !$_SESSION['user']) {
+            header('Location: index.php?controller=moto&action=list');
+        } else {
+            $controller->addMoto();
+        }
     }
 }
 
@@ -37,6 +40,10 @@ if ($_GET['controller'] == 'admin') {
     }
 
     if ($_GET['action'] == 'administration') {
-        require 'Vue/admin/administration.php';
+        if (empty($_SESSION) || !$_SESSION['user']) {
+            header('Location: index.php?controller=moto&action=list');
+        } else {
+            require 'Vue/admin/administration.php';
+        }
     }
 }

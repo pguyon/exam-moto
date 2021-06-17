@@ -25,6 +25,11 @@ class MotoController
 
             $result = $this->uploadFile();
             $fileUrl = null;
+            if ($result['success']) {
+                $fileUrl = $result['file_name'];
+            } else {
+                $errors[] = $result['errors'];
+            }
 
             if (empty($_POST['marque'])) {
                 $errors[] = 'Veuillez entrez la marque de la moto';
