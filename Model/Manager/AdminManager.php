@@ -7,8 +7,27 @@ class AdminManager extends dbConnect
     {
         parent::__construct();
     }
-    public function login()
+
+
+    public function userLogin()
     {
-        // TODO
+    }
+
+
+    public function checkAdmin($username)
+    {
+        $admin = null;
+        $query = $this->bdd->prepare("SELECT * FROM utilisateur WHERE username = :username");
+        $query->execute(['username' => $username]);
+        $adminProfil = $query->fetch();
+
+        if ($adminProfil) {
+            $admin = new Admin(
+                $adminProfil['username'],
+                $adminProfil['password'],
+                $adminProfil['id']
+            );
+        }
+        return $admin;
     }
 }
