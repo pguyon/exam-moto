@@ -24,6 +24,7 @@
         <p class="card-text">' . $moto->getModel() . '</p>
         <p class="card-text">' . $moto->getType() . '</p>
         <a href="index.php?controller=admin&action=motodetail&id=' . $moto->getId() . '" class="btn btn-secondary">Détail</a>
+        <a href="index.php?controller=admin&action=motodelete&id=' . $moto->getId() . '" class="btn btn-secondary">Supprimer</a>
     </div>
 </div>
     ')

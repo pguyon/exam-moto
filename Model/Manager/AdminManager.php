@@ -74,4 +74,9 @@ class AdminManager extends dbConnect
 
         return $moto;
     }
+    public function deleteMoto(Moto $moto)
+    {
+        $query = $this->bdd->prepare("DELETE FROM moto WHERE id =:id");
+        $query->execute(['id' => $moto->getId()]);
+    }
 }

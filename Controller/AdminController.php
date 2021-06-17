@@ -54,4 +54,13 @@ class AdminController
             require 'Vue/moto/detail.php';
         }
     }
+
+    public function motoDelete($id)
+    {
+        $moto = $this->adminManager->getOneMoto($id);
+        if ($moto != null) {
+            $this->adminManager->deleteMoto($moto);
+            require 'Vue/admin/administration.php';
+        }
+    }
 }

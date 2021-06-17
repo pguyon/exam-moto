@@ -52,4 +52,11 @@ if ($_GET['controller'] == 'admin') {
             $controller->motoDetail($_GET['id']);
         }
     }
+    if ($_GET['action'] == 'motodelete' && isset($_GET['id'])) {
+        if (empty($_SESSION) || !$_SESSION['user']) {
+            header('location: index.php?controller=admin&action=login');
+        } else {
+            $controller->motoDelete($_GET['id']);
+        }
+    }
 }
