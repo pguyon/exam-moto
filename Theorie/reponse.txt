@@ -14,3 +14,7 @@ Liste des 5 méthodes magiques:
             $this->age = $age;
             $this->yeux = $yeux;
         }
+
+    * __destruct : Il est appellé automatiquement à la fin d'un script.
+
+    
