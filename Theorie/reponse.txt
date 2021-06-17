@@ -1,0 +1,16 @@
+Liste des 5 méthodes magiques:
+    *  __construct
+    *  __destruct
+    *  __set
+    *  __isset
+    *  __unset
+
+: Eléments déclencheurs:
+    * __construct : création d'une nouvelle instance d'objet.
+        exemple :
+
+        public function __construct ($sex, $age, $yeux){
+            $this->sex = $sex;
+            $this->age = $age;
+            $this->yeux = $yeux;
+        }
