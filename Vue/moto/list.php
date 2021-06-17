@@ -10,27 +10,27 @@
     <?php
     include 'Vue/menu.php';
     ?>
-    <table class="table table-dark">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Marque</th>
-                <th scope="col">Modèle</th>
-                <th scope="col">type</th>
-                <th scope="col">Image</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Yamaha</td>
-                <td>CBR</td>
-                <td>test</td>
-                <td>Image</td>
-            </tr>
 
-        </tbody>
-    </table>
+    <?php
+
+    foreach ($motos as $moto)
+
+        echo ('
+        <div class="card" style="width: 18rem;">
+        <img src="' . $moto->getImage() . '" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">' . $moto->getMarque() . '</h5>
+            <p class="card-text">' . $moto->getModel() . '</p>
+            <p class="card-text">' . $moto->getType() . '</p>
+            <a href="#" class="btn btn-secondary">Détail</a>
+        </div>
+    </div>
+        ')
+
+
+    ?>
+
+
 
 
 

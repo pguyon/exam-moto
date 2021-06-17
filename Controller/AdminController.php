@@ -36,6 +36,13 @@ class AdminController
     public function disconnect()
     {
         session_destroy();
-        header('location: index.php?controller=moto&action=list');
+        header('location: index.php?controller=admin&action=login');
+    }
+
+
+    public function listMoto()
+    {
+        $motos = $this->adminManager->getAllMoto();
+        require 'Vue/admin/administration.php';
     }
 }

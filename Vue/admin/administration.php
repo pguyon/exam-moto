@@ -10,6 +10,33 @@
     <?php
     require 'Vue/admin/menuadmin.php';
     ?>
+    <div class="container">
+        <div class="row col12">
+            <?php
+
+            foreach ($motos as $moto)
+
+                echo ('
+    <div class="card" style="width: 18rem;">
+    <img src="' . $moto->getImage() . '" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">' . $moto->getMarque() . '</h5>
+        <p class="card-text">' . $moto->getModel() . '</p>
+        <p class="card-text">' . $moto->getType() . '</p>
+        <a href="#" class="btn btn-secondary">Détail</a>
+    </div>
+</div>
+    ')
+
+
+            ?>
+
+        </div>
+
+    </div>
+
+
+
 
 
 </body>

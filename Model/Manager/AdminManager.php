@@ -39,4 +39,39 @@ class AdminManager extends dbConnect
         }
         return $admin;
     }
+
+    public function getAllMoto()
+    {
+
+        $tableauMoto = [];
+
+        $query = $this->bdd->prepare("SELECT * FROM moto;");
+        $query->execute();
+
+        $resultats = $query->fetchAll();
+
+
+        foreach ($resultats as $resultat) {
+
+            $tableauMoto[] = new Moto($resultat['marque'], $resultat['model'], $resultat['type'], $resultat['image'], $resultat['id']);
+        }
+
+        return $tableauMoto;
+    }
+
+    public function getOneMoto($id)
+    {
+        $moto = null;
+
+        $query = $this->bdd->prepare("SELECT * FROM moto WHERE id = :id");
+        $query->execute(['id' => $id]);
+
+        $res = $query->fetch();
+
+        if ($res) {
+            $moto = new Moto($res['marque'], $res['modele'], $res['type'], $res['image'], $res['id']);
+        }
+
+        return $moto;
+    }
 }
