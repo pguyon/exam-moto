@@ -54,7 +54,7 @@ class MotoController
         $errors = [];
 
         $uploadExtension = [
-            'image/jpeg',
+
             'image/png',
         ];
         if ($_FILES['image']['error'] != 0) {
@@ -62,7 +62,7 @@ class MotoController
         }
 
         if (!in_array($_FILES['image']['type'], $uploadExtension)) {
-            $errors[] = 'Format de l\'image incorrect';
+            $errors[] = 'Format de l\'image incorrect png seulement';
         }
 
         if ($_FILES['image']['size'] > 1000000) {

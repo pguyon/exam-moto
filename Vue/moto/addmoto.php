@@ -5,6 +5,7 @@
     include 'Vue/Parts/global-stylesheet.php';
     ?>
     <link rel="stylesheet" href="Public/css/login.css">
+    <link href="Public/css/admin.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                     <option value="roadster">Roadster</option>
                 </select>
                 <input type="file" class="form-control" aria-describedby="modeleHelp" name="image" placeholder="Image">
-                <input type="submit" class="fadeIn fourth" value="Ajouter">
+                <input type="submit" class="fadeIn fourth mt-2" value="Ajouter">
                 <?php
                 require 'Vue/Parts/erreurs.php';
                 ?>
