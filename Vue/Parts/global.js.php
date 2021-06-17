@@ -1,0 +1,1 @@
+<script rel="script" src="Public/js/global.min.js"></script>
