@@ -23,6 +23,7 @@ class AdminManager extends dbConnect
     }
 
 
+
     public function checkAdmin($username)
     {
         $admin = null;

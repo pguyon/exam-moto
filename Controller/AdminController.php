@@ -60,7 +60,7 @@ class AdminController
         $motos = $this->adminManager->getOneMoto($id);
         if ($motos != null) {
             $this->adminManager->deleteMoto($motos);
-            require 'Vue/admin/administration.php';
+            header('location: index.php?controller=admin&action=administration');
         }
     }
 }

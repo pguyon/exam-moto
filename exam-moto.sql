@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 17 juin 2021 à 13:03
+-- Généré le : jeu. 17 juin 2021 à 13:32
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
@@ -40,8 +40,9 @@ CREATE TABLE `moto` (
 --
 
 INSERT INTO `moto` (`id`, `marque`, `model`, `type`, `image`) VALUES
-(12, 'Kawazaki', 'Ninja 400', 'roadster', 'Public/upload/60cb47dcc6eea.png'),
-(11, 'Yamaha', 'MT-07', 'roadster', 'Public/upload/60cb47b3036ff.jpeg');
+(20, 'Kawazaki', 'Ninja 400', 'roadster', 'Public/upload/60cb4e8210907.png'),
+(18, 'Yamaha', 'MT-07', 'roadster', 'Public/upload/60cb4e4ec5fa6.jpeg'),
+(21, 'Harley Davidson', 'Maisto', 'cutom', 'Public/upload/60cb4ec61e865.jpeg');
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,7 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `moto`
 --
 ALTER TABLE `moto`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
